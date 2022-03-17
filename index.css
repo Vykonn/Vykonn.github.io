@@ -1,5 +1,5 @@
 body{
-    background-image: url('back.gif');
+    background-image: url('chuck-rgb.github.io/back.gif');
     background-size: cover;
     
     
@@ -10,8 +10,8 @@ body{
 }
 @font-face {
     font-family: Pixelfont;
-    src: url(pixelfont.woff);
+    src: url(chuck-rgb.github.io/pixelfont.woff);
   }
 div {
-    font-family: myFirstFont;
+    font-family: Pixelfont;
 }
