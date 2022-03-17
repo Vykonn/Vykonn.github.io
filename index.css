@@ -1,16 +1,13 @@
 body{
-    background-image: url('chuck-rgb.github.io/back.gif');
+    background-image: url('back.gif');
     background-size: cover;
-    
-    
-    
     height: 100vh;
     padding:0;
     margin:0;
 }
 @font-face {
     font-family: Pixelfont;
-    src: url(chuck-rgb.github.io/pixelfont.woff);
+    src: url(pixelfont.woff);
   }
 div {
     font-family: Pixelfont;
