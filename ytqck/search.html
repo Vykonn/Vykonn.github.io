@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YtQck - Music Search Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <link href="assets/site/logo-64.png" rel="icon" type="image/png" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="64x64" href="assets/site/logo-64.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/site/logo-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--website meta-->
+    <meta name="keywords" content="YouTube, YouTube Music Search Engine, Music Download, YouTube mp3 download, Download Music, Music Download Free, Music Search Engine, midhruvjaink, Dhruv Jain, YtQck, YtQck Music Search, YouTube Music Download, YouTube songs download, YouTube free download, Songs download site," />
+    <meta name="description" content="Download Music for Free. Get every song and download the mp3." />
+    <meta name="author" content="midhruvjaink" />
+    <!--robot-->
+    <meta content="index, follow" name="robots" />
+    <meta content="1 days" name="revisit-after" />
+    <meta content="all" name="robots" />
+    <meta content="all" name="googlebot" />
+    <meta name="google-site-verification" content="LSv_vOaHKCu5IXfUeCRTeE74fHrvKHwwEcKT1TpxIio" />
+    <!--social sharing links-->
+    <meta property="fb:app_id" content="758134654325447">
+    <meta property="og:title" content="YtQck | Music Search Engine" />
+    <meta property="og:site_name" content="YtQck" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Download Music for Free. Get every song and download the mp3 with just no ads and fast speed." />
+    <meta property="og:url" content="https://ytqck.github.io/" />
+    <meta property="og:image" content="/assets/site/logo-64.png" />
+    <meta property="og:image:width" content="64" />
+    <meta property="og:image:height" content="64" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:site" content="@midhruvjaink" />
+    <meta name="twitter:creator" content="@midhruvjaink" />
+    <meta name="twitter:title" content="YtQck | Music Search Engine" />
+    <meta name="twitter:description" content="Download Music for Free. Get every song and download the mp3 with just no ads and fast speed." />
+    <meta name="twitter:image" content="/assets/site/logo-64.png" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+  </head>
+  <body>
+    <style>
+    body{
+      background: #f2f2f2;
+      overflow-x: hidden;
+    }
+    header{
+      padding-top: 5px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    header>div{
+      display: inline-block;
+    }
+    #search{
+      margin-left: 40px;
+      width: 40%;
+    }
+    img{
+
+    }
+    form{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      max-width: 736px;
+      overflow: hidden;
+      width: auto;
+    }
+    .ms{
+      position: relative;
+      display: block;
+    }
+    .msi{
+      background-color: #fff !important;
+      border-color: #c7d6f7;
+      border-style: solid;
+      border-width: 2px 1px 2px 2px;
+      border-right: none;
+      padding: 0;
+      height: 38px;
+      padding-right: 0;
+      border: 1px solid #d9d9d9 !important;
+      border-right: none !important;
+      border-top: 1px solid silver !important;
+    }
+    .msii{
+      padding: 5px;
+      display: flex;
+    }
+    input{
+      outline: none;
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      display: -webkit-box;
+      -webkit-box-ordinal-group: 2;
+      -webkit-box-flex: 1;
+      color: #000;
+      line-height: 25px;
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      box-sizing: border-box;
+      user-select: text;
+      cursor: auto;
+      letter-spacing: 1px;
+      word-spacing: normal;
+      text-transform: none;
+      text-indent: 0px;
+      text-shadow: none;
+      padding-left: 8px;
+      width: 94%;
+    }
+    #msb{
+      border-radius: 0;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #4d90fe;
+      box-sizing: border-box;
+      background: -webkit-gradient(linear,left top,left bottom,from(#4D90FE),to(#4787ED)) !important;
+      border: 1px solid #3079ed;
+      height: 40px;
+      width: 38px;
+      align-items: flex-start;
+      text-align: center;
+      cursor: default;
+      color: buttontext;
+    }
+    .sbi{
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABqUlEQVR42r3WzyvDcRzH8Y+vOHDkpBwpB46k3MwOfu0wLvgDyEEp/8DOrjat5MSJs7i4O7CaWClqshxELphf81QO65Vv7+++37ZXPVprfT7Py7e+c5VKxY+HMWSQwzMYn3xHBjF4cLXy+2ESFwiyC0xGDbdiE2G2idagYY0eIMoOJB4onMV/u0IKcQxgBIs4wjd02VrCE9C9YxXNcD6GcQPdRJCwh3M5WEYcLoBO6IN4Ds8Kx6BbM2KqB69yR8wKp+XANVrgarQu92xY4RM5kIILoVfuObXCJTkwChfSQ9U9j1b4U8L9EcL56ous8BOqNxQhXARj3GuFcxJeDhntwFfVPWdWOCPh45DhJbknbYXjYJEesHYU5Y64FfZwKYdu0RUw2oQdOX8Jzwr/moaugD4j2oZd6KZqeTttQVdGBoNogvvTjRWUoNsL8z4+hN/eUMQzrJWRtMIa30aY7UNfq0krrBIoIMgKSMDhM2jc+pc5jizyeAHjk+/IYlye3gWf+IwRjsKOa7ge5qHxD8xIuLFxCTc0nqhHTM1B46W6RjWu4UaZxR3uMfUDvUqknv4oBC4AAAAASUVORK5CYII=') no-repeat center center;
+      background-size: 15px;
+      height: 15px;
+      margin: auto;
+      width: 15px;
+    }
+    .result{
+      height: auto;
+      background: #fff;
+      margin: 0;
+      padding-left: 180px;
+    }
+    .sc{
+      margin-top: 0;
+      margin-bottom: 26px;
+      line-height: 1.2;
+      display: block;
+      visibility: visible;
+    }
+    .sci{
+      position: relative;
+    }
+    .songT{
+      display: block;
+      z-index: 1;
+      position: relative;
+      font-size: 16px;
+    }
+    .songT>h3{
+      color: #1a0dab;
+      margin: -11px -16px -33px -16px;
+      padding: 13px 16px 33px 16px;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+    .songT>h3>a{
+      text-decoration: none;
+      color: #1a0dab;
+      font-weight: normal;
+    }
+    .songL{
+      margin-top: 0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: small;
+      height: 18px;
+      line-height: 16px;
+    }
+    .songL>span{
+      font-size: 14px;
+      color: #006621;;
+      font-weight: normal;
+      white-space: normal;
+    }
+    .link{
+      max-width: 95%;
+      white-space: nowrap;
+      color: #006621;
+    }
+    .scidwn>span{
+      line-height: 1.4;
+      word-wrap: break-word;
+      color: #545454;
+      font-size: small;
+      font-weight: normal;
+    }
+    .actions{
+      background: #fff;
+      outline: none;
+      color: #000;
+      text-decoration: none;
+      border: 1px solid #222;
+      border-radius: 2px;
+      cursor: pointer;
+      width: 10%;
+      margin: 6px;
+      padding: 4px;
+      font-size: 1.1em;
+      -webkit-appearance: button;
+      -moz-appearance: button;
+      appearance: button;
+      text-align: center;
+    }
+    .actions:hover{
+      cursor: pointer;
+    }
+    .ui-autocomplete{
+      background: #fff;
+      color: #000;
+      width: 80px;
+      padding: 5px;
+      top: 52px;
+      left: 169px;
+      border: 1px solid #ccc;
+      border-top-color: #d9d9d9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .ui-menu .ui-menu-item a {
+      color: #888;
+    }
+    .ui-menu .ui-menu-item:hover {
+        display: block;
+        text-decoration: none;
+        color: #3D3D3D;
+        cursor: pointer;
+        background-color: lightgray;
+        background-image: none;
+        border: 1px solid lightgray;
+    }
+    .ui-widget-content .ui-state-hover, .ui-widget-content .ui-state-focus {
+        border: 1px solid lightgray;
+        background-image: none;
+        background-color: lightgray;
+        font-weight: bold;
+        color: #3D3D3D;
+    }
+    .msde{
+      display: block;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-resolution:192dpi){
+      header{
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      header>div{
+        display: block;
+      }
+      #search{
+        margin-left: 0px;
+        width: 100%;
+      }
+      img{
+
+      }
+      form{
+        margin-top: 20px;
+      }
+      input{
+        width: 89%;
+      }
+      .result{
+        background: inherit;
+        padding: 10px;
+      }
+      .sc{
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        border-radius: 2px;
+        margin: 0 0 10px 0;
+      }
+      .sci{
+        display: block;
+        margin: 0;
+        color: #222;
+        padding: 11px 16px 11px 16px;
+        line-height: 20px;
+      }
+      .sciup{
+        border-bottom: 1px solid #ebebeb;
+        display: block;
+        font-size: 14px;
+        word-wrap: break-word;
+        text-align: left;
+        margin: 0 -16px 9px -16px;
+        padding: 0 16px 11px 16px;
+      }
+      .songT{
+        display: block;
+        z-index: 1;
+        position: relative;
+        font-size: 16px;
+      }
+      .songT>h3{
+        color: #1a0dab;
+        font-size: 16px;
+        margin: -11px -16px -33px -16px;
+        padding: 13px 16px 33px 16px;
+        display: block;
+      }
+      .songL{
+        margin-top: 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+      }
+      .link{
+        max-width: 95%;
+        white-space: nowrap;
+        color: #006621;
+      }
+      .scidwn{
+        line-height: 20px;
+        word-wrap: break-word;
+        font-size: 14px;
+        display: block;
+      }
+      .scidwn>span{
+        color: #222;
+      }
+      .actions{
+        width: 98%;
+        padding: 5px;
+        margin: 2px;
+      }
+      .ui-autocomplete{
+        top: 116px;
+        left: 10px;
+        max-width: 89%;
+      }
+    }
+    </style>
+    <div class="wrapper">
+        <header>
+          <div id="mlogo">
+            <img src="assets/site/logo-114-39.png" alt="YtQck - Music Search Engine Logo" />
+          </div>
+          <div id="search">
+            <form action="/search" id="sf" onsubmit="return q.value!=''" role="search">
+              <div class="ms">
+                <div class="msi">
+                  <div class="msii">
+                    <input id="query" type="search" name="q" maxlength="2048" autocomplete="off" autocorrect="off">
+                  </div>
+                </div>
+                <button class="sb" id="msb" name="btn" value="sub" type="submit">
+                  <div class="sbi"></div>
+                </button>
+                <div class="msr">
+                </div>
+              </div>
+            </form>
+          </div>
+        </header>
+
+        <div class="result">
+          <!--aliens coming-->
+        </div>
+    <script src="scripts/app.js"></script>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <!--<script type="text/javascript">
+    var sc_project=11288394;
+    var sc_invisible=1;
+    var sc_security="9ab84165";
+    var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+    document.write("<sc"+"ript type='text/javascript' src='" +scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+    </script>
+    <noscript>
+      <div class="statcounter">
+        <a title="web counter" href="http://statcounter.com/" target="_blank">
+          <img class="statcounter" src="//c.statcounter.com/11288394/0/9ab84165/1/" alt="web counter">
+        </a>
+      </div>
+    </noscript>-->
+     <!-- End of StatCounter Code for Default Guide -->
+     <script>
+         (function(i, s, o, g, r, a, m) {
+             i['GoogleAnalyticsObject'] = r;
+             i[r] = i[r] || function() {
+                 (i[r].q = i[r].q || []).push(arguments)
+             }, i[r].l = 1 * new Date();
+             a = s.createElement(o),
+                 m = s.getElementsByTagName(o)[0];
+             a.async = 1;
+             a.src = g;
+             m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+         ga('create', 'UA-87971868-1', 'auto');
+         ga('send', 'pageview');
+     </script>
+  </body>
+</html>

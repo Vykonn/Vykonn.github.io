@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include head.html %}
+</head>
+
+<body onload="load()">
+    <div id="loader">
+        <img id="loaderImg" src="assets/site/newLogo.svg" width="100px" height="100px" />
+    </div>
+    <div id="desktop" class="noselect display_none">
+        {% include topNav.html %}
+        <div class="main">
+            {% include menu.html %} {% include home.html %} {% include feed.html %}
+        </div>
+        {% include player.html %}
+    </div>
+    <div id="mobile">
+        <div id="mobile-frame">
+            <span class="title font-size-30 grey-text">YtQck</span>
+            <p class="red-text center">Working on the mobile layout</p>
+        </div>
+    </div>
+    {% include scripts.html %}
+</body>
+
+</html>
