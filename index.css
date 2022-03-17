@@ -1,9 +1,5 @@
 body{
     background-image: url('back.gif');
-    background-size: cover;
-    height: 100vh;
-    padding:0;
-    margin:0;
 }
 @font-face {
     font-family: Pixelfont;
