@@ -1,10 +1,7 @@
-body{
-    background-image: url('back.gif');
-}
 @font-face {
-    font-family: Pixelfont;
-    src: url(pixelfont.woff);
-  }
-div {
-    font-family: Pixelfont;
+    font-family: "pixelfont";
+    src: url("pixelfont.woff") format('woff');
+}
+.pixfont {
+    font-family: pixelfont
 }
