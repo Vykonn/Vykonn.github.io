@@ -1,11 +1,5 @@
-@font-face {
-    font-family: 'silkscreennormal';
-    src: url('slkscr-webfont.woff2') format('woff2'),
-         url('slkscr-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 .scn1{
     font-family: 'silkcreennormal';
+    src: url('slkscr-webfont.woff2') format('woff2'),
+         url('slkscr-webfont.woff') format('woff');
 }
