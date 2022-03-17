@@ -1,7 +1,11 @@
 @font-face {
-    font-family: "pixelfont";
-    src: url("pixelfont.woff") format('woff');
+    font-family: 'silkscreennormal';
+    src: url('slkscr-webfont.woff2') format('woff2'),
+         url('slkscr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
-.pixfont {
-    font-family: pixelfont
+.scn1{
+    font-family: 'silkcreennormal';
 }
